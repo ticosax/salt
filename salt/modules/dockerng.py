@@ -258,8 +258,6 @@ import salt.ext.six as six
 try:
     import docker
     import docker.utils
-    if docker.version_info < (1, 4, 0):
-      raise ImportError
     HAS_DOCKER_PY = True
 except ImportError:
     HAS_DOCKER_PY = False
@@ -291,7 +289,7 @@ __func_alias__ = {
 
 # Minimum supported versions
 MIN_DOCKER = (1, 0, 0)
-MIN_DOCKER_PY = (1, 0, 0)
+MIN_DOCKER_PY = (1, 4, 0)
 
 VERSION_RE = r'([\d.]+)'
 
